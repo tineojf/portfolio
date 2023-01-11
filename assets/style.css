@@ -58,3 +58,10 @@ body {
   filter: brightness(0.8);
 }
 
+tr div {
+  margin-top: 1rem;
+}
+
+tr td.table_td {
+  width: 33%;
+}
