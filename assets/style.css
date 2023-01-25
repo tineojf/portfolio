@@ -1,7 +1,4 @@
-body {
-  /* background-color: black;
-  color: blueviolet; */
-}
+
 /* main */
 #hover_me {
   --color: #00a97f;
@@ -133,4 +130,27 @@ tr td.table_td {
 
 .title-skills {
   color:green
+}
+
+.project-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-text {
+  color: green;
+}
+
+.h1-title {
+  font-family: 'Roboto Slab', serif;
+}
+
+.quote-title {
+  font-family: 'Calligraffitti', cursive;
+  font-size:30px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #ea5358;
 }
