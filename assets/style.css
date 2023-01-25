@@ -1,7 +1,12 @@
+:root {
+  --color-primary: #1d7874;
+  --color-secondary: #f9d939;
+  --color-other: #1d2834;
+}
 
 /* main */
 #hover_me {
-  --color: #00a97f;
+  --color: #f9d939;
   padding: 0.8em 1.7em;
   background-color: transparent;
   border-radius: 0.3em;
@@ -11,7 +16,7 @@
   transition: 0.5s;
   font-weight: 400;
   font-size: 17px;
-  border: 1px solid;
+  border: 1px solid var(--color-primary);
   font-family: inherit;
   text-transform: uppercase;
   color: var(--color);
@@ -65,71 +70,13 @@ tr td.table_td {
   width: 33%;
 }
 
-/* project */
-.project_card {
-  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
-  /* width: 190px; */
-  height: 7rem;
-  padding: 5px;
-  border-radius: 1rem;
-  overflow: visible;
-  background: #f7ba2b;
-  background: var(--background);
-  position: relative;
-  z-index: 1;
-}
-
-.project_card::after {
-  position: absolute;
-  content: "";
-  top: 30px;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  transform: scale(0.6);
-  filter: blur(30px);
-  background: #f7ba2b;
-  background: var(--background);
-  transition: opacity 0.3s;
-}
-
-.project_card-info {
-  --color: #ffffff;
-  background: var(--color);
-  color: var(--color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  border-radius: 0.7rem;
-}
-
-.project_card .title {
-  font-weight: bold;
-  letter-spacing: 0.1em;
-}
-
-.project_card .title a {
-  text-decoration: none;
-  color: var(--color);
-}
-
-/*Hover*/
-.project_card:hover::after {
-  opacity: 0;
-}
-
-.project_card:hover .project_card-info a{
-  color: #f7ba2b;
-  transition: color 1s;
-}
-
+/* Title */
 .title-skills {
-  color:green
+  color: var(--color-primary);
+}
+
+.h1-title {
+  font-family: "Roboto Slab", serif;
 }
 
 .project-title {
@@ -138,19 +85,54 @@ tr td.table_td {
   margin-bottom: 20px;
 }
 
-.nav-text {
-  color: green;
-}
-
-.h1-title {
-  font-family: 'Roboto Slab', serif;
-}
-
 .quote-title {
-  font-family: 'Calligraffitti', cursive;
-  font-size:30px;
+  font-family: "Calligraffitti", cursive;
+  font-size: 30px;
+}
+
+/* navbar */
+.nav-text {
+  color: var(--color-primary);
+}
+
+.btn-success {
+  background-color: var(--color-primary);
+}
+
+.btn-outline-secondary {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .btn-outline-secondary:hover {
-  background-color: #ea5358;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* Botton tell me more */
+.link-center {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.link-center:hover {
+  color: var(--color-primary);
+}
+
+/* Background color */
+.background-about {
+  background-color: var(--color-primary);
+  height: 400px;
+  color: #fff;
+}
+
+/* Dividers */
+.hr-bar-divider {
+  border-color: var(--color-secondary) !important;
+}
+
+/* Projects */
+.projects-btn {
+  background-color: var(--color-secondary);
+  border-color: #fff;
 }

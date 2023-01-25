@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <!-- <div class="container-fluid m-2 px-0" style="background-color: aquamarine"> -->
     <div class="container-fluid m-2 px-0">
       <!-- navbar -->
       <div class="d-flex justify-content-between px-5 pt-2 align-items-center">
@@ -78,7 +77,7 @@
       <!-- main -->
       <div class="p-5 pt-4">
         <div class="card-body text-center px-5 py-0">
-          <h1 class="text-uppercase h1-title">Django Backend Developer</h1>
+          <h1 class="text-uppercase h1-title">Django <span class="h1-title" style="color: #f9d939;">Backend</span> Developer</h1>
           <p class="fst-italic fs-6 quote-title">
             The most complicated skill is to be simple and significant...
           </p>
@@ -97,7 +96,7 @@
 
         <div class="d-grid gap-2 mx-auto" style="width: 14%">
           <button id="hover_me" style="font-size: large">
-            <a href="#about" style="text-decoration: none; color: green"
+            <a href="#about" class="link-center"
               >Tell me more</a
             >
           </button>
@@ -115,8 +114,8 @@
               style="width: 50%"
             />
           </div>
-          <div class="pb-5" style="background-color: green; height: 400px">
-            <div class="container p-5 text-center" style="color: white">
+          <div class="pb-5 background-about">
+            <div class="container p-5 text-center">
               <div class="card-body text-center">
                 <h2 class="text-uppercase my-3">
                   Hi, I’m Tineo. Nice to meet you.
@@ -138,7 +137,7 @@
       <!-- table -->
       <span id="skills"></span>
 
-      <div class="my-5">
+      <div class="my-5 pt-5">
         <p class="display-4 text-center text-uppercase mt-5">Skills</p>
         <div class="container py-2 card">
           <table class="table text-center">
@@ -227,152 +226,151 @@
       <div class="p-5" id="projects">
         <p class="display-4 text-center text-uppercase m-0">Projects</p>
         <div class="px-5 pt-4">
-          <div class="row">
-            <div class="col-sm-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title project-title">
-                    API Canciones, Playlist, Usuarios
-                  </h5>
-                  <p class="card-text">
-                    Express & Typescript. Crea usuarios, canciones y playlist en
-                    modo público o privado.
-                  </p>
-                  <a
-                    href="https://github.com/tineodev/express_project"
-                    class="btn btn-success"
-                    target="_blank"
-                    >GitHub</a
-                  >
+          <div class="px-5">
+            <div class="row">
+              <div class="col-sm-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title project-title">
+                      API Canciones, Playlist, Usuarios
+                    </h5>
+                    <p class="card-text">
+                      Express & Typescript. Crea usuarios, canciones y playlist en
+                      modo público o privado.
+                    </p>
+                    <a
+                      href="https://github.com/tineodev/express_project"
+                      class="btn btn-success projects-btn"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title project-title">
-                    API Pagos de Servicios - Backend
-                  </h5>
-                  <p class="card-text">
-                    Django REST & MySQL. Crea servicios, pagos y registra en
-                    pagos a tiempo o en demora para cada usuario.
-                  </p>
-                  <a
-                    href="https://github.com/tineodev/rest_project"
-                    class="btn btn-success"
-                    target="_blank"
-                    >GitHub</a
-                  >
+              <div class="col-sm-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title project-title">
+                      API Pagos de Servicios - Backend
+                    </h5>
+                    <p class="card-text">
+                      Django REST & MySQL. Crea servicios, pagos y pagos con demora para cada usuario.
+                    </p>
+                    <a
+                      href="https://github.com/tineodev/rest_project"
+                      class="btn btn-success projects-btn"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title project-title">
-                    Pago de Servicios - Frontend
-                  </h5>
-                  <p class="card-text">
-                    JavaScript. Parte visual del cliente, ejecuta las peticiones
-                    a API Pagos de Servicios.
-                  </p>
-                  <a
-                    href="https://github.com/tineodev/js_project"
-                    class="btn btn-success"
-                    target="_blank"
-                    >GitHub</a
-                  >
+              <div class="col-sm-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title project-title">
+                      Pago de Servicios - Frontend
+                    </h5>
+                    <p class="card-text">
+                      JavaScript. Parte visual del cliente, ejecuta las peticiones
+                      a API Pagos de Servicios.
+                    </p>
+                    <a
+                      href="https://github.com/tineodev/js_project"
+                      class="btn btn-success projects-btn"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title project-title">Proyecto Portafolio</h5>
-                  <p class="card-text">
-                    Django & MySQL. Diseño de un portafolio, uso de DB, sesiones
-                    y usuarios.
-                  </p>
-                  <a
-                    href="https://github.com/tineodev/django_portafolio"
-                    class="btn btn-success"
-                    target="_blank"
-                    >GitHub</a
-                  >
+              <div class="col-sm-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title project-title">Proyecto Portafolio</h5>
+                    <p class="card-text">
+                      Django & MySQL. Diseño de un portafolio, uso de DB, sesiones
+                      y usuarios.
+                    </p>
+                    <a
+                      href="https://github.com/tineodev/django_portafolio"
+                      class="btn btn-success projects-btn"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title project-title">
-                    Uso API Rick & Morty - Frontend
-                  </h5>
-                  <p class="card-text">
-                    Django & API. Parte visual de los personajes de la API de
-                    Rick & Morty.
-                  </p>
-                  <a
-                    href="https://github.com/tineodev/final_examen2"
-                    class="btn btn-success"
-                    target="_blank"
-                    >GitHub</a
-                  >
+              <div class="col-sm-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title project-title">
+                      Uso API Rick & Morty - Frontend
+                    </h5>
+                    <p class="card-text">
+                      Django & API. Parte visual de los personajes de la API de
+                      Rick & Morty.
+                    </p>
+                    <a
+                      href="https://github.com/tineodev/final_examen2"
+                      class="btn btn-success projects-btn"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title project-title">
-                    Registro de Libros & PokeAPI
-                  </h5>
-                  <p class="card-text">
-                    Python. Registra libros en un archivo .csv y realiza
-                    peticiones a PokeAPI.
-                  </p>
-                  <a href="#" class="btn btn-success">GitHub</a>
+              <div class="col-sm-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title project-title">
+                      Registro de Libros & PokeAPI
+                    </h5>
+                    <p class="card-text">
+                      Python. Registra libros en un archivo .csv y realiza
+                      peticiones a PokeAPI.
+                    </p>
+                    <a
+                      href="https://github.com/tineodev/final_examen2"
+                      class="btn btn-success projects-btn"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title project-title">Clon de Google</h5>
-                  <p class="card-text">
-                    HTML & CSS. Clon de Google usando lenguaje de hipertexto y
-                    estilos.
-                  </p>
-                  <a
-                    href="https://github.com/tineodev/platzi_HTML-CSS_practice"
-                    class="btn btn-success"
-                    target="_blank"
-                    >GitHub</a
-                  >
+              <div class="col-sm-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title project-title">Clon de Google</h5>
+                    <p class="card-text">
+                      HTML & CSS. Clon de Google usando lenguaje de hipertexto y
+                      estilos.
+                    </p>
+                    <a
+                      href="https://github.com/tineodev/platzi_HTML-CSS_practice"
+                      class="btn btn-success projects-btn"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-4 mb-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title project-title">Trivia F1</h5>
-                  <p class="card-text">
-                    Python. Uso del lenguaje puro. Variables, condicionales,
-                    booleanos, bucles, tiempo, etc.
-                  </p>
-                  <a
-                    href="https://github.com/tineodev/trivia_silabuz"
-                    class="btn btn-success"
-                    target="_blank"
-                    >GitHub</a
-                  >
+              <div class="col-sm-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title project-title">Trivia F1</h5>
+                    <p class="card-text">
+                      Python. Uso del lenguaje puro. Variables, condicionales,
+                      booleanos, bucles, tiempo, etc.
+                    </p>
+                    <a
+                      href="https://github.com/tineodev/trivia_silabuz"
+                      class="btn btn-success projects-btn"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -397,7 +395,7 @@
 
             <!-- Linkedin -->
             <a
-              class="btn btn-outline-dark btn-floating m-1 rounded-circle"
+              class="btn btn-outline-info btn-floating m-1 rounded-circle"
               href="https://www.linkedin.com/in/tineo-dev/"
               role="button"
               target="_blank"
@@ -406,7 +404,7 @@
 
             <!-- Instagram -->
             <a
-              class="btn btn-outline-dark btn-floating m-1 rounded-circle"
+              class="btn btn-outline-danger btn-floating m-1 rounded-circle"
               href="https://www.instagram.com/tineo_jf/"
               role="button"
               target="_blank"
@@ -415,7 +413,7 @@
 
             <!-- Twitter -->
             <a
-              class="btn btn-outline-dark btn-floating m-1 rounded-circle"
+              class="btn btn-outline-warning btn-floating m-1 rounded-circle"
               href="https://twitter.com/tineo_dev"
               role="button"
               target="_blank"
