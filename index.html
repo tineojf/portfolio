@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <div class="container-fluid m-2 px-5" style="background-color: aquamarine">
+    <!-- <div class="container-fluid m-2 px-0" style="background-color: aquamarine"> -->
+    <div class="container-fluid m-2 px-0">
       <!-- navbar -->
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between px-5 pt-4">
         <!-- navbar_logo -->
         <ul class="nav justify-content-center">
           <li class="nav-item">
@@ -26,13 +27,13 @@
         <!-- navbar_center -->
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="#">Tech</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Social Media</a>
+            <a class="nav-link" href="#socialmedia">Social Media</a>
           </li>
         </ul>
 
@@ -40,7 +41,7 @@
         <ul class="nav justify-content-center">
           <li class="nav-item p-1">
             <a
-              class="btn btn-light"
+              class="btn btn-outline-secondary"
               href="https://www.linkedin.com/in/tineo-dev/"
               target="_blank"
               >LinkedIn</a
@@ -48,7 +49,7 @@
           </li>
           <li class="nav-item p-1">
             <a
-              class="btn btn-dark"
+              class="btn btn-success"
               href="https://github.com/tineodev"
               target="_blank"
               >GitHub</a
@@ -58,64 +59,67 @@
       </div>
 
       <!-- main -->
-      <div class="card p-5">
-        <div class="card-body text-center px-5 pt-5 pb-0">
+      <div class="p-5">
+        <div class="card-body text-center px-5 py-0">
           <h1 class="text-uppercase">Django Backend Developer</h1>
           <p class="blockquote fst-italic fs-6">
             The most complicated skill is to be simple and significant...
           </p>
         </div>
 
-        <div
-          class="container mx-auto py-4"
-          style="width: 30vw; background-color: bisque"
-        >
+        <div class="container mx-auto py-0">
           <div style="display: flex; align-items: center">
             <img
-              src="/assets/images/hacker.gif"
+              src="/assets/images/port.png"
               class="img-fluid mx-auto"
               alt="..."
-              width="200px"
+              width="500px"
             />
           </div>
         </div>
 
-        <div class="d-grid gap-2 mx-auto py-2">
-          <button id="hover_me">Tell me more</button>
+        <div class="d-grid gap-2 mx-auto" style="width: 14%">
+          <button id="hover_me" style="font-size: large"><a href="#about" style="text-decoration: none; color: green;" >Tell me more</a></button>
         </div>
       </div>
 
       <!-- about -->
-      <div class="card" id="about">
-        <div class="pt-5" style="background-color: bisque">
+      <div class="">
+        <div class="pt-5" id="about">
           <div style="display: flex; align-items: center">
             <img
               src="/assets/images/banner.png"
               class="img-fluid mx-auto"
-              alt="..."
+              alt="banner"
+              style="width: 50%"
             />
           </div>
-          <div class="container p-5 text-center">
-            <div class="card-body text-center">
-              <h2 class="text-uppercase my-3">
-                Hi, I’m Tineo. Nice to meet you.
-              </h2>
-              <p class="fs-6 py-2 m-0">
-                Desde pequeño vi como el mundo usaba la tecnología para impulsar
-                nuestro desarrollo, ahora busco ser parte de esta gran historia.
-                Soy buen estudiante, apasionado con el nuevo conocimiento y
-                siempre pendiente de nuevas innovaciones y proyectos que pueda
-                realizar. The most complicated skill is to be simple and
-                significant...
-              </p>
+          <div class="pb-5" style="background-color: green; height: 400px">
+            <div class="container p-5 text-center" style="color: white">
+              <div class="card-body text-center">
+                <h2 class="text-uppercase my-3">
+                  Hi, I’m Tineo. Nice to meet you.
+                </h2>
+                <p class="fs-6 py-2 m-0">
+                  Desde pequeño vi como el mundo usaba la tecnología para
+                  impulsar nuestro desarrollo, ahora busco ser parte de esta
+                  gran historia. Soy buen estudiante, apasionado con el nuevo
+                  conocimiento y siempre pendiente de nuevas innovaciones y
+                  proyectos que pueda realizar. The most complicated skill is to
+                  be simple and significant...
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- table -->
-      <div class="card my-5">
-        <div class="container py-5">
+      <span id="skills"></span>
+
+      <div class="my-5">
+        <p class="display-4 text-center text-uppercase mt-5">Skills</p>
+        <div class="container py-2 card">
           <table class="table text-center">
             <tbody>
               <tr>
@@ -127,7 +131,7 @@
                       alt="..."
                       style="width: 100px"
                     />
-                    <h5 class="card-title mt-4 mb-3">Frontend</h5>
+                    <h5 class="card-title mt-4 mb-3 title-skills">Frontend</h5>
                     <p>
                       Realizo interfaces para la parte del usuario, enfoncado en
                       simpleza y elegancia
@@ -142,7 +146,7 @@
                       alt="..."
                       style="width: 100px"
                     />
-                    <h5 class="card-title mt-4 mb-3">Backend</h5>
+                    <h5 class="card-title mt-4 mb-3 title-skills">Backend</h5>
                     <p>
                       Programo la parte que el usuario no ve, pero que debe
                       funcionar correctamente
@@ -157,7 +161,7 @@
                       alt="..."
                       style="width: 100px"
                     />
-                    <h5 class="card-title mt-4 mb-3">Tools</h5>
+                    <h5 class="card-title mt-4 mb-3 title-skills">Tools</h5>
                     <p>
                       Utilizo varias herramientas para que sea mas fácil el
                       proceso de iniciar un proyecto
@@ -185,50 +189,170 @@
                 <td class="table_td">
                   <div>VSCode</div>
                   <div>Git</div>
-                  <div>Github</div>
+                  <div>GitHub</div>
                   <div>Docker*</div>
                   <div>Bash</div>
                 </td>
               </tr>
             </tbody>
           </table>
-          <p>* Mínimo</p>
+          <p class="px-3">* Esencial</p>
         </div>
       </div>
+
+      <hr class="border border-success border-2 opacity-75 mx-5" />
 
       <!-- projects -->
-      <div class="card p-5">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="p-5">
+        <p class="display-4 text-center text-uppercase m-0">Projects</p>
+        <div class="px-5 pt-4">
+          <div class="row">
+            <div class="col-sm-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">API Canciones, Playlist, Usuarios</h5>
+                  <p class="card-text">
+                    Express & Typescript. Crea usuarios, canciones y playlist en
+                    modo público o privado.
+                  </p>
+                  <a
+                    href="https://github.com/tineodev/express_project"
+                    class="btn btn-success"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col-sm-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">API Pagos de Servicios - Backend</h5>
+                  <p class="card-text">
+                    Django REST & MySQL. Crea servicios, pagos y registra en
+                    pagos a tiempo o en demora para cada usuario.
+                  </p>
+                  <a
+                    href="https://github.com/tineodev/rest_project"
+                    class="btn btn-success"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Pago de Servicios - Frontend</h5>
+                  <p class="card-text">
+                    JavaScript. Parte visual del cliente, ejecuta las peticiones
+                    a API Pagos de Servicios.
+                  </p>
+                  <a
+                    href="https://github.com/tineodev/js_project"
+                    class="btn btn-success"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Proyecto Portafolio</h5>
+                  <p class="card-text">
+                    Django & MySQL. Diseño de un portafolio, uso de DB, sesiones
+                    y usuarios.
+                  </p>
+                  <a
+                    href="https://github.com/tineodev/django_portafolio"
+                    class="btn btn-success"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Uso API Rick & Morty - Frontend</h5>
+                  <p class="card-text">
+                    Django & API. Parte visual de los personajes de la API de
+                    Rick & Morty.
+                  </p>
+                  <a
+                    href="https://github.com/tineodev/final_examen2"
+                    class="btn btn-success"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Registro de Libros & PokeAPI</h5>
+                  <p class="card-text">
+                    Python. Registra libros en un archivo .csv y realiza
+                    peticiones a PokeAPI.
+                  </p>
+                  <a href="#" class="btn btn-success">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Clon de Google</h5>
+                  <p class="card-text">
+                    HTML & CSS. Clon de Google usando lenguaje de hipertexto y
+                    estilos.
+                  </p>
+                  <a
+                    href="https://github.com/tineodev/platzi_HTML-CSS_practice"
+                    class="btn btn-success"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Trivia F1</h5>
+                  <p class="card-text">
+                    Python. Uso del lenguaje puro. Variables, condicionales,
+                    booleanos, bucles, tiempo, etc.
+                  </p>
+                  <a
+                    href="https://github.com/tineodev/trivia_silabuz"
+                    class="btn btn-success"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <hr class="border border-success border-2 opacity-75 mx-5" />
+
       <!-- footer -->
-      <footer class="text-center text-white my-5">
+      <footer class="text-center text-white" id="socialmedia">
         <div class="container p-4 pb-0">
           <section class="mb-4">
             <!-- Github -->
@@ -279,7 +403,7 @@
             href="https://getbootstrap.com/"
             target="_blank"
             style="text-decoration: none"
-            ><strong>Bootstrap.com</strong></a
+            ><strong> Bootstrap.com</strong></a
           >
         </div>
       </footer>

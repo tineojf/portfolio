@@ -130,3 +130,7 @@ tr td.table_td {
   color: #f7ba2b;
   transition: color 1s;
 }
+
+.title-skills {
+  color:green
+}
