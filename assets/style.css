@@ -91,6 +91,10 @@ tr td.table_td {
 }
 
 /* navbar */
+.navbar-toggler {
+  color: var(--color-primary);
+}
+
 .nav-text {
   color: var(--color-primary);
 }
@@ -122,7 +126,7 @@ tr td.table_td {
 /* Background color */
 .background-about {
   background-color: var(--color-primary);
-  height: 18rem;
+  height: 20rem;
   color: #fff;
 }
 
@@ -135,4 +139,26 @@ tr td.table_td {
 .projects-btn {
   background-color: var(--color-secondary);
   border-color: #fff;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  p#banner-text {
+    font-size: .8rem !important;
+  }
+  h2#banner-title {
+    font-size: 1rem;
+    margin: 0.3125rem 0 0 0;
+  }
+  div#div-banner {
+    padding: 2rem !important;
+
+  }
+
+  table#table-skills {
+    font-size: .5rem;
+  }
+
+  img#img-skills {
+    width: 60px !important;
+  }
 }
