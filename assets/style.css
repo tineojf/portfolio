@@ -162,3 +162,9 @@ tr td.table_td {
     width: 60px !important;
   }
 }
+
+@media (min-width: 600px) {
+  div#projects {
+    margin: 3rem;
+  }
+}
