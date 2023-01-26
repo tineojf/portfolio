@@ -122,7 +122,7 @@ tr td.table_td {
 /* Background color */
 .background-about {
   background-color: var(--color-primary);
-  height: 400px;
+  height: 18rem;
   color: #fff;
 }
 
