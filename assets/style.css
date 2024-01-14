@@ -36,12 +36,16 @@ body {
 }
 
 #titlename h2,
-#about h2 {
+#about h2,
+#skills h2,
+#skills h3 {
   margin: 10px 0;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
+  text-transform: uppercase;
+  color: var(--color-primary);
 }
 
 #titlename p {
@@ -69,15 +73,29 @@ body {
 }
 
 /* about */
-#about {
+#about,
+#skills {
   margin: 4rem 1.5rem;
 }
 
-#about p {
+#about p,
+#skills p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   text-align: justify;
   color: var(--font-secondary);
+}
+
+/* skills */
+#skills h2 {
+  margin: 20px 0;
+}
+#skills h3 {
+  color: var(--font-primary);
+  text-transform: capitalize;
+}
+#skills p {
+  font-size: 0.8rem;
 }
 
 /* mediaquery - tablet */
