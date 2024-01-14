@@ -3,6 +3,7 @@
   --color-secondary: #f9d939;
   --color-other: #1d2834;
   --font-primary: #e8e9f3;
+  --font-secondary: #717388;
 }
 
 body {
@@ -24,7 +25,45 @@ body {
 
 /* titlename */
 #titlename {
-  margin: 3.5rem 0;
+  margin: 2.6rem 1.5rem;
+}
+
+#titlename h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+#titlename h2 {
+  margin: 6px 0;
+  font-family: "Sarabun", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+#titlename p {
+  font-family: "Sarabun", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  color: var(--font-secondary);
+}
+
+#titlename div.rrss {
+  text-align: left;
+}
+
+#titlename div.rrss a {
+  text-decoration: none;
+}
+#titlename div.rrss i:hover {
+  color: var(--color-primary);
+}
+
+#titlename div.rrss i {
+  margin: 0 0.5rem;
+  color: var(--font-secondary);
 }
 
 /* main */
