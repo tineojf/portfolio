@@ -18,12 +18,31 @@ body {
 }
 
 /* navbar */
+#navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+
+  background-color: var(--color-other);
+  padding: 0.2rem 0.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#navbar > div > ul {
+  display: none;
+}
+
 #navbar > button {
-  padding: 20px;
+  padding: 10px;
   border: none;
   background: transparent;
   color: var(--font-primary);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #navbar > button:active {
   color: var(--color-primary);
