@@ -4,6 +4,10 @@
   --color-other: #1d2834;
 }
 
+/* 
+background-image: linear-gradient(to right top, #01122b, #001634, #00193c, #021c45, #071e4e);
+ */
+
 /* main */
 #hover_me {
   --color: #f9d939;
@@ -143,7 +147,7 @@ tr td.table_td {
 
 @media (min-width: 0px) and (max-width: 600px) {
   p#banner-text {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
   }
   h2#banner-title {
     font-size: 1rem;
@@ -151,11 +155,10 @@ tr td.table_td {
   }
   div#div-banner {
     padding: 2rem !important;
-
   }
 
   table#table-skills {
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
 
   img#img-skills {
