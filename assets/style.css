@@ -2,8 +2,8 @@
   --color-primary: #4ea699;
   --color-secondary: #f9d939;
   --color-other: #1d2834;
-  --font-primary: #e8e9f3;
-  --font-secondary: #717388;
+  --font-primary: #ffffff;
+  --font-secondary: #8789a3;
 }
 
 body {
@@ -29,23 +29,25 @@ body {
 }
 
 #titlename h1 {
-  font-family: "DM Serif Display", serif;
-  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2.2rem;
   text-align: left;
 }
 
-#titlename h2 {
-  margin: 6px 0;
-  font-family: "Sarabun", sans-serif;
+#titlename h2,
+#about h2 {
+  margin: 10px 0;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
 }
 
 #titlename p {
-  font-family: "Sarabun", sans-serif;
+  margin: 10px 0;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: bold;
   text-align: left;
   color: var(--font-secondary);
 }
@@ -66,56 +68,19 @@ body {
   color: var(--font-secondary);
 }
 
-/* main */
-
-/* table */
-tr div {
-  margin-top: 1rem;
+/* about */
+#about {
+  margin: 4rem 1.5rem;
 }
 
-tr td.table_td {
-  width: 33%;
+#about p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+  color: var(--font-secondary);
 }
 
-/* Title */
-.title-skills {
-  color: var(--color-primary);
-}
-
-.h1-title {
-  font-family: "Roboto Slab", serif;
-}
-
-.project-title {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.quote-title {
-  font-family: "Calligraffitti", cursive;
-  font-size: 30px;
-}
-
-/* Background color */
-.background-about {
-  background-color: var(--color-primary);
-  height: 20rem;
-  color: #fff;
-}
-
-/* Dividers */
-.hr-bar-divider {
-  border-color: var(--color-secondary) !important;
-}
-
-/* Projects */
-.projects-btn {
-  background-color: var(--color-secondary);
-  border-color: #fff;
-}
-
-/* mediaquery para tablet */
+/* mediaquery - tablet */
 @media (min-width: 600px) {
   #navbar {
     padding: 1rem 0.2rem;
@@ -133,32 +98,5 @@ tr td.table_td {
 
   #navbar .nav-text {
     color: var(--color-primary);
-  }
-}
-
-@media (min-width: 0px) and (max-width: 600px) {
-  p#banner-text {
-    font-size: 0.8rem !important;
-  }
-  h2#banner-title {
-    font-size: 1rem;
-    margin: 0.3125rem 0 0 0;
-  }
-  div#div-banner {
-    padding: 2rem !important;
-  }
-
-  table#table-skills {
-    font-size: 0.5rem;
-  }
-
-  img#img-skills {
-    width: 60px !important;
-  }
-}
-
-@media (min-width: 600px) {
-  div#projects {
-    margin: 3rem;
   }
 }
