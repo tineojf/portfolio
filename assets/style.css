@@ -19,34 +19,11 @@ body {
 
 /* navbar */
 #navbar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: stretch;
-
-  background-color: var(--color-other);
-  padding: 0.2rem 0.2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  padding: 1rem 0.2rem;
 }
 
 #navbar > div > ul {
   display: none;
-}
-
-#navbar > button {
-  padding: 10px;
-  border: none;
-  background: transparent;
-  color: var(--font-primary);
-  font-size: 1.5rem;
-}
-#navbar > button:active {
-  color: var(--color-primary);
-  cursor: pointer;
 }
 
 #navbar .nav-text {
@@ -100,6 +77,22 @@ tr td.table_td {
 .projects-btn {
   background-color: var(--color-secondary);
   border-color: #fff;
+}
+
+/* mediaquery para tablet */
+@media (min-width: 600px) {
+  #navbar {
+    background-color: transparent;
+  }
+
+  #navbar > div > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
