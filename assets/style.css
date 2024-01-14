@@ -2,11 +2,20 @@
   --color-primary: #1d7874;
   --color-secondary: #f9d939;
   --color-other: #1d2834;
+  --font-primary: #fff;
 }
 
-/* 
-background-image: linear-gradient(to right top, #01122b, #001634, #00193c, #021c45, #071e4e);
- */
+body {
+  background-image: linear-gradient(
+    to right top,
+    #01122b,
+    #001634,
+    #00193c,
+    #021c45,
+    #071e4e
+  );
+  color: var(--font-primary);
+}
 
 /* main */
 #hover_me {
