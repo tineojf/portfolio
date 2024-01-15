@@ -197,6 +197,18 @@ h2.title-h2,
   color: #333745;
 }
 
+/* footer */
+#footer p {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+#footer span.footer-tech {
+  color: var(--font-primary);
+}
+#footer span.footer-tech:hover {
+  color: var(--color-primary);
+}
+
 /* mediaquery - tablet */
 @media (min-width: 600px) {
   #navbar {
