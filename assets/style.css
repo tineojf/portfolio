@@ -41,9 +41,7 @@ body {
   text-align: left;
 }
 
-#titlename h2,
-#about h2,
-#skills h2,
+h2.title-h2,
 #skills h3 {
   margin: 10px 0;
   font-size: 1rem;
