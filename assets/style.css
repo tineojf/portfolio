@@ -210,7 +210,7 @@ h2.title-h2,
 
 /* mediaquery - tablet */
 @media (min-width: 768px) {
-  /* projects */
+  /* projects - grid */
   .item-container {
     width: 100%;
     height: 120px;
@@ -256,7 +256,8 @@ h2.title-h2,
 
   /* footer */
   #footer p {
-    font-size: 0.9rem;
+    text-align: center;
+    font-size: 0.75rem;
   }
 }
 
