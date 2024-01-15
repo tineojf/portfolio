@@ -6,6 +6,13 @@
   --font-secondary: #8789a3;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   background-image: linear-gradient(
     to right top,
@@ -29,7 +36,6 @@ body {
 }
 
 #titlename h1 {
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 2.2rem;
   text-align: left;
@@ -40,7 +46,6 @@ body {
 #skills h2,
 #skills h3 {
   margin: 10px 0;
-  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
@@ -48,9 +53,13 @@ body {
   color: var(--color-primary);
 }
 
+#titlename h2 {
+  text-transform: capitalize;
+  margin: 15px 0;
+}
+
 #titlename p {
   margin: 10px 0;
-  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   text-align: left;
   color: var(--font-secondary);
@@ -58,6 +67,7 @@ body {
 
 #titlename div.rrss {
   text-align: left;
+  margin: 16px 0;
 }
 
 #titlename div.rrss a {
@@ -80,7 +90,6 @@ body {
 
 #about p,
 #skills p {
-  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   text-align: justify;
   color: var(--font-secondary);
@@ -90,12 +99,22 @@ body {
 #skills h2 {
   margin: 20px 0;
 }
+
 #skills h3 {
   color: var(--font-primary);
   text-transform: capitalize;
 }
+
 #skills p {
   font-size: 0.8rem;
+  line-height: 1.6rem;
+}
+
+#skills span.tech {
+  font-weight: bold;
+}
+#skills span.tech:hover {
+  color: var(--color-primary);
 }
 
 /* mediaquery - tablet */
