@@ -78,7 +78,7 @@ h2.title-h2,
 
 #titlename h1 {
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-align: left;
 }
 
@@ -210,8 +210,18 @@ h2.title-h2,
 
 /* mediaquery - tablet */
 @media (min-width: 768px) {
+  /* share styles */
   .container-section {
     margin: 4rem 3rem;
+  }
+
+  /* titlename */
+  #titlename {
+    margin: 4rem 3rem;
+  }
+
+  #titlename h1 {
+    font-size: 3rem;
   }
 
   /* projects - grid */
