@@ -277,6 +277,37 @@ h2.title-h2,
 
 /* mediaquery - desktop */
 @media (min-width: 1024px) {
+  /* share styles */
+  .container-section {
+    margin: 4rem 8rem;
+  }
+
+  h2.title-h2,
+  .title-h3 {
+    font-size: 1.5rem;
+  }
+
+  .p-about {
+    margin-top: 20px;
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .p-section {
+    /* margin-top: 20px; */
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  /* titlename */
+  #titlename {
+    margin: 4rem 8rem;
+  }
+
+  #titlename h1 {
+    font-size: 3rem;
+  }
+
   #navbar {
     padding: 1rem 0.2rem;
     background-color: transparent;
