@@ -294,23 +294,30 @@ h2.title-h2,
   }
 
   .p-section {
-    /* margin-top: 20px; */
     font-size: 1.2rem;
     line-height: 1.8rem;
   }
 
   /* titlename */
   #titlename {
-    margin: 4rem 8rem;
+    margin: 5rem 8rem;
   }
 
   #titlename h1 {
     font-size: 3rem;
   }
 
+  /* navbar */
   #navbar {
-    padding: 1rem 0.2rem;
+    margin: 0px;
+    padding: 2rem 0.2rem;
     background-color: transparent;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
   }
 
   #navbar > div > ul {
@@ -324,7 +331,17 @@ h2.title-h2,
     list-style: none;
   }
 
-  #navbar .nav-text {
+  #navbar > div > ul > li {
+    margin: 0 2rem;
+    font-size: 1.2rem;
+  }
+
+
+  #navbar > div > ul > li > a {
     color: var(--color-primary);
+  }
+
+  #navbar > div > ul > li > a:hover {
+    color: var(--font-primary);
   }
 }
