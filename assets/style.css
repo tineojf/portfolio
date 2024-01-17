@@ -210,6 +210,10 @@ h2.title-h2,
 
 /* mediaquery - tablet */
 @media (min-width: 768px) {
+  .container-section {
+    margin: 4rem 3rem;
+  }
+
   /* projects - grid */
   .item-container {
     width: 100%;
@@ -217,9 +221,9 @@ h2.title-h2,
     margin: 30px 0;
 
     display: grid;
-    grid-template-columns: 150px 1.6fr;
+    grid-template-columns: 100px 1.6fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
+    gap: 0px 30px;
     grid-auto-flow: row;
     grid-template-areas:
       "item-icon item-h3"
