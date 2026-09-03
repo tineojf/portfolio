@@ -20,4 +20,10 @@
 .history
 .ionide
 
+### Astro ###
+# Gitignore template for Astro projects
+# Ignore content collection generated files
+.astro
+node_modules
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode

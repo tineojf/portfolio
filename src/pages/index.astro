@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { PitWallHeader } from '../components/PitWallHeader';
+import DriverHero from '../components/DriverHero.astro';
+import { RaceSectorsExperience } from '../components/RaceSectorsExperience';
+import { TelemetryProjectCard } from '../components/TelemetryProjectCard';
+import GarageTechStack from '../components/GarageTechStack.astro';
+import EducationCertificates from '../components/EducationCertificates.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Jean Franco Tineo | Full Stack Developer - F1 Telemetry Portfolio">
+  <!-- Pit Wall Interactive Navigation Bar -->
+  <PitWallHeader client:load />
+
+  <main>
+    <!-- Hero Section -->
+    <DriverHero />
+
+    <!-- Experience Sectors -->
+    <RaceSectorsExperience client:visible />
+
+    <!-- Telemetry Projects -->
+    <TelemetryProjectCard client:visible />
+
+    <!-- Garage Specs (Tech Stack) -->
+    <GarageTechStack />
+
+    <!-- Education & Certifications -->
+    <EducationCertificates />
+  </main>
+
+  <!-- Footer -->
+  <Footer />
+</Layout>
