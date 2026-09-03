@@ -1,62 +1,65 @@
 ---
 ---
 
-<section id="hero" style="padding-top: 150px; padding-bottom: 90px; position: relative;">
+<section id="hero" style="padding-top: 140px; padding-bottom: 80px; position: relative;">
   <div class="container-custom">
     
-    <div style="max-width: 850px;">
+    <div style="max-width: 800px;">
       
-      <!-- Minimal Badge Strip -->
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem;">
-        <span class="f1-pill f1-pill-red">
-          <span className="status-dot" style="background-color: var(--f1-red);"></span> DRIVER #88
+      <!-- Multi-Team Color Pills Strip -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
+        <span class="team-badge team-badge-ferrari">
+          #88 TINEO
         </span>
-        <span class="f1-pill f1-pill-cyan">
+        <span class="team-badge team-badge-mclaren">
           FULL STACK DEVELOPER
         </span>
-        <span class="font-mono text-muted" style="font-size: 0.72rem;">
-          LOC: PERÚ
+        <span class="team-badge team-badge-mercedes">
+          SPRING BOOT & REACT
+        </span>
+        <span class="team-badge team-badge-aston">
+          PERÚ 🇵🇪
         </span>
       </div>
 
-      <!-- Main Headline -->
-      <h1 class="font-f1" style="font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; color: #ffffff;">
-        Jean Franco <span style="color: var(--f1-red);">Tineo</span>
+      <!-- Clean Headline Title -->
+      <h1 style="font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.25rem; color: #ffffff;">
+        Jean Franco <span style="color: var(--team-ferrari);">Tineo</span>
       </h1>
 
-      <!-- Subtitle Description -->
-      <p style="font-size: 1.15rem; color: #a2a2b8; line-height: 1.65; max-width: 720px; margin-bottom: 2.2rem; font-weight: 400;">
-        Desarrollador de Software Full Stack enfocado en el ciclo de vida completo de aplicaciones <strong style="color: #ffffff; font-weight: 600;">SaaS</strong>. Especializado en el ecosistema <strong style="color: var(--cyan-telemetry); font-weight: 600;">Java (Spring Boot)</strong>, frontend moderno con <strong style="color: #ffffff; font-weight: 600;">React / Angular</strong>, infraestructura en <strong style="color: #ffffff; font-weight: 600;">AWS & Docker</strong> e integración de <strong style="color: var(--green-sector); font-weight: 600;">IA</strong>.
+      <!-- Description -->
+      <p style="font-size: 1.15rem; color: #a8a8b8; line-height: 1.65; max-width: 720px; margin-bottom: 2.2rem; font-weight: 400;">
+        Desarrollador de Software Full Stack especializado en el ciclo de vida completo de aplicaciones <strong style="color: #ffffff;">SaaS</strong>. Experiencia sólida en el ecosistema <strong style="color: var(--team-mclaren);">Java (Spring Boot)</strong>, desarrollo frontend moderno con <strong style="color: var(--team-mercedes);">React / Angular</strong>, infraestructura en <strong style="color: var(--team-aston);">AWS & Docker</strong> e integración de soluciones con <strong style="color: var(--team-alpine);">Inteligencia Artificial</strong>.
       </p>
 
-      <!-- Minimal Telemetry Spec Row -->
-      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2.5rem; padding: 1.25rem 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);" class="spec-row">
-        <div>
+      <!-- Clean Spec Row with Escuderías Accents -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px;" class="spec-row">
+        <div style="border-left: 3px solid var(--team-ferrari); padding-left: 1rem;">
           <div class="font-mono text-muted" style="font-size: 0.68rem; text-transform: uppercase; margin-bottom: 2px;">Normativa SaaS</div>
-          <div class="font-f1" style="font-size: 0.95rem; font-weight: 600; color: #ffffff;">ISO 9001 Compliance</div>
+          <div style="font-size: 1.05rem; font-weight: 700; color: #ffffff;">ISO 9001 Compliance</div>
         </div>
-        <div style="border-left: 1px solid var(--border-subtle); padding-left: 1.5rem;">
+        <div style="border-left: 3px solid var(--team-mclaren); padding-left: 1rem;">
           <div class="font-mono text-muted" style="font-size: 0.68rem; text-transform: uppercase; margin-bottom: 2px;">Backend Core</div>
-          <div class="font-f1" style="font-size: 0.95rem; font-weight: 600; color: var(--cyan-telemetry);">Spring Boot / Express</div>
+          <div style="font-size: 1.05rem; font-weight: 700; color: var(--team-mclaren);">Spring Boot / Express</div>
         </div>
-        <div style="border-left: 1px solid var(--border-subtle); padding-left: 1.5rem;">
+        <div style="border-left: 3px solid var(--team-mercedes); padding-left: 1rem;">
           <div class="font-mono text-muted" style="font-size: 0.68rem; text-transform: uppercase; margin-bottom: 2px;">Despliegue & Nube</div>
-          <div class="font-f1" style="font-size: 0.95rem; font-weight: 600; color: var(--green-sector);">Docker + AWS</div>
+          <div style="font-size: 1.05rem; font-weight: 700; color: var(--team-mercedes);">Docker + AWS</div>
         </div>
       </div>
 
-      <!-- Minimal CTA Buttons & Links -->
+      <!-- Action Buttons -->
       <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;">
-        <a href="#experiencia" style="padding: 10px 22px; background: var(--f1-red); color: #ffffff; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: opacity 0.2s ease;" onmouseenter="this.style.opacity='0.85'" onmouseleave="this.style.opacity='1'">
-          VER EXPERIENCIA (SECTORES) ↓
+        <a href="#experiencia" style="padding: 10px 22px; background: var(--team-ferrari); color: #ffffff; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: opacity 0.2s ease;" onmouseenter="this.style.opacity='0.85'" onmouseleave="this.style.opacity='1'">
+          Ver Experiencia →
         </a>
 
-        <a href="mailto:tineo.dev@gmail.com" style="padding: 10px 20px; background: transparent; border: 1px solid var(--border-subtle); color: #ffffff; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; text-decoration: none; border-radius: 4px; transition: border-color 0.2s ease;" onmouseenter="this.style.borderColor='var(--f1-red)'" onmouseleave="this.style.borderColor='var(--border-subtle)'">
-          CONTACTO DIRECTO
+        <a href="mailto:tineo.dev@gmail.com" style="padding: 10px 20px; background: transparent; border: 1px solid var(--border-subtle); color: #ffffff; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; text-decoration: none; border-radius: 4px; transition: border-color 0.2s ease;" onmouseenter="this.style.borderColor='var(--team-ferrari)'" onmouseleave="this.style.borderColor='var(--border-subtle)'">
+          Contacto Directo
         </a>
 
         <!-- Social Icons -->
-        <div style="display: flex; gap: 10px; margin-left: 10px;">
+        <div style="display: flex; gap: 12px; margin-left: 10px;">
           <a href="https://github.com/tineojf" target="_blank" aria-label="GitHub" style="color: var(--text-muted); font-size: 1.1rem; text-decoration: none; transition: color 0.2s ease;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='var(--text-muted)'">
             <i class="fa-brands fa-github"></i>
           </a>
@@ -73,10 +76,8 @@
 
 <style>
   @media (max-width: 640px) {
-    .spec-row > div {
-      border-left: none !important;
-      padding-left: 0 !important;
-      width: 100%;
+    .spec-row {
+      grid-template-columns: 1fr !important;
     }
   }
 </style>

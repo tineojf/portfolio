@@ -8,7 +8,9 @@ interface Project {
   description: string;
   stack: string[];
   githubUrl: string;
-  tag: string;
+  teamBadgeClass: string;
+  teamName: string;
+  teamBorderColor: string;
 }
 
 export const TelemetryProjectCard: React.FC = () => {
@@ -17,12 +19,14 @@ export const TelemetryProjectCard: React.FC = () => {
   const projects: Project[] = [
     {
       id: 'ventamon',
-      title: 'Ventamon Mobile & IA Chat',
+      title: 'Ventamon Mobile & Chat IA',
       category: 'MOBILE & IA',
-      description: 'App móvil en React Native y backend Express/TypeScript. Chat conversacional con IA para asistencia guiada en tiempo real.',
+      description: 'Aplicación móvil en React Native y backend Express/TypeScript. Chat conversacional con IA para asistencia guiada.',
       stack: ['React Native', 'TypeScript', 'Express', 'OpenAI API'],
       githubUrl: 'https://github.com/tineojf',
-      tag: 'MOBILE / IA',
+      teamBadgeClass: 'team-badge-aston',
+      teamName: 'ASTON MARTIN IA',
+      teamBorderColor: 'var(--team-aston)',
     },
     {
       id: 'nss',
@@ -31,16 +35,20 @@ export const TelemetryProjectCard: React.FC = () => {
       description: 'Arquitectura SaaS Backend en Java Spring Boot y MySQL para trazabilidad y cumplimiento de auditorías de calidad ISO 9001.',
       stack: ['Java', 'Spring Boot', 'MySQL', 'Docker'],
       githubUrl: 'https://github.com/tineojf',
-      tag: 'ENTERPRISE SAAS',
+      teamBadgeClass: 'team-badge-ferrari',
+      teamName: 'FERRARI SAAS',
+      teamBorderColor: 'var(--team-ferrari)',
     },
     {
       id: 'spotify',
       title: 'API Spotify Music Manager',
       category: 'BACKEND',
-      description: 'API RESTful para gestión de canciones, perfiles de usuario y playlists con estado público y privado.',
+      description: 'API RESTful para gestión de canciones, perfiles de usuario y listas de reproducción públicas y privadas.',
       stack: ['Express', 'TypeScript', 'Prisma ORM'],
       githubUrl: 'https://github.com/tineojf/express_project',
-      tag: 'API REST',
+      teamBadgeClass: 'team-badge-alpine',
+      teamName: 'ALPINE API',
+      teamBorderColor: 'var(--team-alpine)',
     },
     {
       id: 'pagos',
@@ -49,7 +57,9 @@ export const TelemetryProjectCard: React.FC = () => {
       description: 'Plataforma para registro de pagos, servicios recurrentes y control de morosidad.',
       stack: ['Django / Express', 'TypeScript', 'MySQL'],
       githubUrl: 'https://github.com/tineojf/rest_project',
-      tag: 'FULL STACK',
+      teamBadgeClass: 'team-badge-mercedes',
+      teamName: 'MERCEDES FULLSTACK',
+      teamBorderColor: 'var(--team-mercedes)',
     },
     {
       id: 'trivia',
@@ -58,7 +68,9 @@ export const TelemetryProjectCard: React.FC = () => {
       description: 'Motor interactivo en Python para simulación de cuestionarios en tiempo real sobre la Fórmula 1.',
       stack: ['Python 3', 'CLI Flow'],
       githubUrl: 'https://github.com/tineojf/trivia_silabuz',
-      tag: 'PYTHON ENGINE',
+      teamBadgeClass: 'team-badge-mclaren',
+      teamName: 'MCLAREN ENGINE',
+      teamBorderColor: 'var(--team-mclaren)',
     },
   ];
 
@@ -70,12 +82,10 @@ export const TelemetryProjectCard: React.FC = () => {
         
         {/* Header & Filters */}
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', gap: '1rem', marginBottom: '2rem' }}>
-          <div>
-            <span className="font-mono text-muted" style={{ fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>
-              // TELEMETRY LOGS
-            </span>
-            <h2 className="font-f1" style={{ fontSize: '1.75rem', color: '#ffffff', fontWeight: 700 }}>
-              Proyectos Destacados <span style={{ color: 'var(--f1-red)' }}>.</span>
+          <div className="section-header" style={{ marginBottom: 0 }}>
+            <span className="section-subtitle">// PROYECTOS Y SOLUCIONES</span>
+            <h2 className="section-title">
+              Proyectos Destacados <span style={{ color: 'var(--team-ferrari)' }}>.</span>
             </h2>
           </div>
 
@@ -88,10 +98,10 @@ export const TelemetryProjectCard: React.FC = () => {
                 className="font-mono"
                 style={{
                   padding: '4px 10px',
-                  fontSize: '0.7rem',
-                  borderRadius: '3px',
-                  border: filter === cat ? '1px solid var(--f1-red)' : '1px solid var(--border-subtle)',
-                  background: filter === cat ? 'var(--f1-red-soft)' : 'transparent',
+                  fontSize: '0.72rem',
+                  borderRadius: '4px',
+                  border: filter === cat ? '1px solid var(--team-ferrari)' : '1px solid var(--border-subtle)',
+                  background: filter === cat ? 'rgba(225, 6, 0, 0.12)' : 'transparent',
                   color: filter === cat ? '#ffffff' : 'var(--text-muted)',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
@@ -114,12 +124,13 @@ export const TelemetryProjectCard: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justify: 'space-between',
+                borderTop: `3px solid ${proj.teamBorderColor}`,
               }}
             >
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-                  <span className="f1-pill f1-pill-cyan" style={{ fontSize: '0.65rem' }}>
-                    {proj.tag}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
+                  <span className={`team-badge ${proj.teamBadgeClass}`} style={{ fontSize: '0.65rem' }}>
+                    {proj.teamName}
                   </span>
                   <a
                     href={proj.githubUrl}
@@ -133,11 +144,11 @@ export const TelemetryProjectCard: React.FC = () => {
                   </a>
                 </div>
 
-                <h3 className="font-f1" style={{ fontSize: '1.15rem', color: '#ffffff', marginBottom: '0.5rem' }}>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: '#ffffff', marginBottom: '0.5rem' }}>
                   {proj.title}
                 </h3>
 
-                <p style={{ color: '#9a9ab0', fontSize: '0.88rem', lineHeight: '1.5', marginBottom: '1.25rem' }}>
+                <p style={{ color: '#a0a0b2', fontSize: '0.88rem', lineHeight: '1.5', marginBottom: '1.25rem' }}>
                   {proj.description}
                 </p>
               </div>

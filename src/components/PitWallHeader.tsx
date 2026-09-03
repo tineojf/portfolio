@@ -14,11 +14,11 @@ export const PitWallHeader: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'EXPERIENCIA', href: '#experiencia' },
-    { name: 'PROYECTOS', href: '#proyectos' },
-    { name: 'STACK', href: '#stack' },
-    { name: 'EDUCACIÓN', href: '#educacion' },
-    { name: 'CONTACTO', href: '#contacto' },
+    { name: 'Experiencia', href: '#experiencia' },
+    { name: 'Proyectos', href: '#proyectos' },
+    { name: 'Stack', href: '#stack' },
+    { name: 'Educación', href: '#educacion' },
+    { name: 'Contacto', href: '#contacto' },
   ];
 
   return (
@@ -29,31 +29,24 @@ export const PitWallHeader: React.FC = () => {
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: scrolled ? 'rgba(8, 8, 12, 0.88)' : 'transparent',
+        backgroundColor: scrolled ? 'rgba(10, 10, 15, 0.9)' : 'transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
         borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
         transition: 'all 0.25s ease',
-        padding: '1.1rem 0',
+        padding: '1.2rem 0',
       }}
     >
       <div className="container-custom" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         
         {/* Brand */}
         <a href="#hero" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div
-            style={{
-              width: '8px',
-              height: '8px',
-              backgroundColor: 'var(--f1-red)',
-              borderRadius: '1px',
-            }}
-          />
-          <div style={{ fontFamily: 'var(--font-f1)', fontWeight: 700, fontSize: '0.95rem', color: '#ffffff', letterSpacing: '0.08em' }}>
-            TINEO <span className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontWeight: 400 }}>// 88</span>
-          </div>
+          <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--team-ferrari)' }} />
+          <span style={{ fontWeight: 700, fontSize: '1rem', color: '#ffffff', letterSpacing: '-0.01em' }}>
+            Jean Franco Tineo <span className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontWeight: 400 }}>// 88</span>
+          </span>
         </a>
 
-        {/* Desktop Links */}
+        {/* Desktop Navigation Links */}
         <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           {navLinks.map((link) => (
             <a
@@ -62,10 +55,8 @@ export const PitWallHeader: React.FC = () => {
               style={{
                 color: 'var(--text-muted)',
                 textDecoration: 'none',
-                fontSize: '0.75rem',
-                fontFamily: 'var(--font-mono)',
+                fontSize: '0.85rem',
                 fontWeight: 500,
-                letterSpacing: '0.05em',
                 transition: 'color 0.2s ease',
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
@@ -75,34 +66,30 @@ export const PitWallHeader: React.FC = () => {
             </a>
           ))}
 
-          {/* Status Indicator */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.7rem', fontFamily: 'var(--font-mono)', color: 'var(--green-sector)', padding: '3px 8px', background: 'rgba(0, 230, 118, 0.05)', borderRadius: '3px', border: '1px solid rgba(0, 230, 118, 0.15)' }}>
-            <span className="status-dot"></span>
-            DRS: ACTIVE
-          </div>
-
           {/* Download CV */}
           <a
             href="./cv-tineo-franco-fs.pdf"
             target="_blank"
             rel="noopener noreferrer"
             style={{
+              padding: '6px 14px',
+              backgroundColor: 'rgba(225, 6, 0, 0.1)',
+              border: '1px solid rgba(225, 6, 0, 0.3)',
+              borderRadius: '4px',
               color: '#ffffff',
               textDecoration: 'none',
               fontFamily: 'var(--font-mono)',
-              fontSize: '0.72rem',
+              fontSize: '0.75rem',
               fontWeight: 500,
               display: 'inline-flex',
               alignItems: 'center',
               gap: '4px',
-              borderBottom: '1px solid var(--f1-red)',
-              paddingBottom: '2px',
-              transition: 'opacity 0.2s ease',
+              transition: 'all 0.2s ease',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--team-ferrari)')}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'rgba(225, 6, 0, 0.1)')}
           >
-            CV.PDF <ArrowUpRight size={12} style={{ color: 'var(--f1-red)' }} />
+            CV.PDF <ArrowUpRight size={13} />
           </a>
         </nav>
 
@@ -127,7 +114,7 @@ export const PitWallHeader: React.FC = () => {
       {mobileMenuOpen && (
         <div
           style={{
-            backgroundColor: '#08080c',
+            backgroundColor: '#0a0a0f',
             borderBottom: '1px solid var(--border-subtle)',
             padding: '1.5rem',
             display: 'flex',
@@ -143,8 +130,7 @@ export const PitWallHeader: React.FC = () => {
               style={{
                 color: '#ffffff',
                 textDecoration: 'none',
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.85rem',
+                fontSize: '0.9rem',
                 padding: '6px 0',
               }}
             >
@@ -157,7 +143,7 @@ export const PitWallHeader: React.FC = () => {
             rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             style={{
-              color: 'var(--f1-red)',
+              color: 'var(--team-ferrari)',
               textDecoration: 'none',
               fontFamily: 'var(--font-mono)',
               fontSize: '0.85rem',
@@ -165,7 +151,7 @@ export const PitWallHeader: React.FC = () => {
               paddingTop: '6px',
             }}
           >
-            DESCARGAR CV (PDF) →
+            Descargar CV (PDF) →
           </a>
         </div>
       )}

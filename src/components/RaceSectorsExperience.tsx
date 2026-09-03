@@ -2,12 +2,13 @@ import React from 'react';
 
 interface ExperienceItem {
   id: string;
-  sectorCode: string;
-  isFastestLap?: boolean;
   role: string;
   company: string;
   location: string;
   period: string;
+  teamName: string;
+  teamBadgeClass: string;
+  teamBorderColor: string;
   highlights: string[];
   skills: string[];
 }
@@ -16,43 +17,48 @@ export const RaceSectorsExperience: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 'nss',
-      sectorCode: 'SECTOR 03 // FASTEST LAP ⚡',
-      isFastestLap: true,
       role: 'Full Stack Developer',
       company: 'New Stage Solutions | NSS',
       location: 'España (Remoto)',
-      period: '09/2025 - 03/2026',
+      period: 'Septiembre 2025 - Marzo 2026',
+      teamName: 'SCUDERIA SAAS',
+      teamBadgeClass: 'team-badge-ferrari',
+      teamBorderColor: 'var(--team-ferrari)',
       highlights: [
-        'Diseño y desarrollo de la arquitectura backend para plataforma SaaS en cumplimiento con la normativa de calidad ISO 9001.',
-        'Diseño y optimización de esquemas de bases de datos relacionales en MySQL, garantizando la trazabilidad de acciones preventivas.',
+        'Diseñar y desarrollar la arquitectura del backend para una plataforma SaaS, implementando lógica compleja para el cumplimiento de normativas de calidad ISO 9001.',
+        'Diseñar y optimizar esquemas de bases de datos relacionales en MySQL, garantizando la integridad de los datos y la trazabilidad de acciones preventivas.',
       ],
       skills: ['Java', 'Spring Boot', 'MySQL', 'SaaS', 'ISO 9001', 'Docker'],
     },
     {
       id: 'ventamon',
-      sectorCode: 'SECTOR 02',
       role: 'Software Developer',
       company: 'Ventamon EIRL',
       location: 'Perú (Híbrido)',
-      period: '03/2025 - 08/2025',
+      period: 'Marzo 2025 - Agosto 2025',
+      teamName: 'MCLAREN MOBILE & IA',
+      teamBadgeClass: 'team-badge-mclaren',
+      teamBorderColor: 'var(--team-mclaren)',
       highlights: [
-        'Construcción del backend escalable en TypeScript y Express, gestionando persistencia y sincronización en tiempo real.',
-        'Desarrollo de aplicación móvil con React Native e integración de chat interactivo basado en IA (OpenAI API).',
+        'Construir el backend escalable de la aplicación mediante TypeScript y Express, gestionando la persistencia de datos y la sincronización en tiempo real.',
+        'Diseñar y desarrollar una aplicación móvil utilizando React Native, integrando un chat interactivo basado en Inteligencia Artificial para asistencia.',
       ],
       skills: ['TypeScript', 'Express', 'React Native', 'OpenAI IA', 'Node.js'],
     },
     {
       id: 'peruanito',
-      sectorCode: 'SECTOR 01',
       role: 'IT Support Technician',
       company: 'Tuberías Peruanito SAC',
       location: 'Perú (Híbrido)',
-      period: '06/2024 - 12/2025',
+      period: 'Junio 2024 - Diciembre 2025',
+      teamName: 'MERCEDES INFRASTRUCTURE',
+      teamBadgeClass: 'team-badge-mercedes',
+      teamBorderColor: 'var(--team-mercedes)',
       highlights: [
-        'Gestión de infraestructura local e híbrida y servicios de Microsoft 365, asegurando disponibilidad de sistemas.',
-        'Soporte técnico avanzado, mantenimiento de servidores locales, configuración de redes y resolución de incidencias.',
+        'Gestionar la infraestructura local e híbrida y servicios de Microsoft 365, asegurando la disponibilidad continua de los sistemas de información.',
+        'Ejecutar labores de soporte técnico avanzado, incluyendo la configuración de redes, el mantenimiento de servidores locales y la resolución de incidencias de hardware.',
       ],
-      skills: ['Microsoft 365', 'Redes & Servers', 'Infraestructura Híbrida'],
+      skills: ['Microsoft 365', 'Redes & Servers', 'Infraestructura Híbrida', 'Hardware'],
     },
   ];
 
@@ -60,17 +66,15 @@ export const RaceSectorsExperience: React.FC = () => {
     <section id="experiencia" style={{ padding: '70px 0', borderTop: '1px solid var(--border-subtle)' }}>
       <div className="container-custom">
         
-        {/* Minimal Section Header */}
-        <div style={{ marginBottom: '2.5rem' }}>
-          <span className="font-mono text-muted" style={{ fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>
-            // CAREER TIMELINE
-          </span>
-          <h2 className="font-f1" style={{ fontSize: '1.75rem', color: '#ffffff', fontWeight: 700 }}>
-            Experiencia Laboral <span style={{ color: 'var(--f1-red)' }}>.</span>
+        {/* Clean Section Header */}
+        <div className="section-header">
+          <span className="section-subtitle">// HISTORIAL PROFESIONAL</span>
+          <h2 className="section-title">
+            Experiencia Laboral <span style={{ color: 'var(--team-ferrari)' }}>.</span>
           </h2>
         </div>
 
-        {/* Experience Cards List */}
+        {/* Experience Items List */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {experiences.map((exp) => (
             <div
@@ -78,37 +82,37 @@ export const RaceSectorsExperience: React.FC = () => {
               className="f1-card"
               style={{
                 padding: '1.5rem 1.75rem',
-                borderLeft: exp.isFastestLap ? '3px solid var(--f1-red)' : '1px solid var(--border-subtle)',
+                borderLeft: `4px solid ${exp.teamBorderColor}`,
               }}
             >
-              {/* Header */}
+              {/* Header Info */}
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: '8px', marginBottom: '0.75rem' }}>
                 <div>
-                  <span className="font-mono" style={{ fontSize: '0.7rem', color: exp.isFastestLap ? 'var(--f1-red)' : 'var(--cyan-telemetry)', fontWeight: 500, marginRight: '10px' }}>
-                    {exp.sectorCode}
+                  <span className={`team-badge ${exp.teamBadgeClass}`} style={{ marginRight: '10px', fontSize: '0.68rem' }}>
+                    {exp.teamName}
                   </span>
-                  <h3 className="font-f1" style={{ fontSize: '1.2rem', color: '#ffffff', display: 'inline-block' }}>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#ffffff', display: 'inline-block' }}>
                     {exp.role} <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>@ {exp.company}</span>
                   </h3>
                 </div>
 
-                <div className="font-mono text-muted" style={{ fontSize: '0.75rem' }}>
+                <div className="font-mono text-muted" style={{ fontSize: '0.78rem' }}>
                   {exp.location} | {exp.period}
                 </div>
               </div>
 
               {/* Highlights */}
-              <ul style={{ paddingLeft: '1.2rem', color: '#b0b0c5', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              <ul style={{ paddingLeft: '1.2rem', color: '#b8b8cc', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1rem' }}>
                 {exp.highlights.map((h, i) => (
                   <li key={i} style={{ marginBottom: '4px' }}>{h}</li>
                 ))}
               </ul>
 
-              {/* Skills Tags */}
+              {/* Skills */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                 {exp.skills.map((s) => (
-                  <span key={s} className="f1-pill">
-                    {s}
+                  <span key={s} className="font-mono text-muted" style={{ fontSize: '0.7rem', padding: '3px 8px', background: 'rgba(255,255,255,0.03)', borderRadius: '3px', border: '1px solid var(--border-subtle)' }}>
+                    #{s}
                   </span>
                 ))}
               </div>

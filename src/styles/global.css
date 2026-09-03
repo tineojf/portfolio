@@ -1,20 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg-dark: #08080c;
-  --bg-card: #101016;
-  --bg-card-hover: #161620;
-  --f1-red: #e10600;
-  --f1-red-soft: rgba(225, 6, 0, 0.12);
-  --cyan-telemetry: #00f0ff;
-  --green-sector: #00e676;
+  /* F1 Team Accent Colors */
+  --team-ferrari: #e10600;
+  --team-mercedes: #00a19c;
+  --team-mclaren: #ff8000;
+  --team-aston: #229971;
+  --team-alpine: #0093cc;
+  --team-redbull: #3671c6;
+  --team-sauber: #52e252;
+  
+  --f1-red: var(--team-ferrari);
+  --bg-dark: #0a0a0f;
+  --bg-card: #12121a;
+  --bg-card-hover: #181824;
+  
   --text-main: #f5f5f8;
-  --text-muted: #7e7e96;
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(225, 6, 0, 0.3);
-  --font-f1: "Chakra Petch", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --font-body: "Inter", system-ui, sans-serif;
+  --text-muted: #88889e;
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  
+  --font-title: 'Inter', system-ui, sans-serif;
+  --font-f1: 'Chakra Petch', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', system-ui, sans-serif;
 }
 
 * {
@@ -45,109 +53,108 @@ body {
   background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e1e2a;
+  background: #1f1f2e;
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--f1-red);
+  background: var(--team-ferrari);
 }
 
 /* Typography Helpers */
 .font-f1 {
   font-family: var(--font-f1);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .font-mono {
   font-family: var(--font-mono);
 }
 
-.text-gradient {
-  background: linear-gradient(180deg, #ffffff 0%, #a2a2b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-red {
-  color: var(--f1-red);
-}
-
-.text-cyan {
-  color: var(--cyan-telemetry);
-}
-
 .text-muted {
   color: var(--text-muted);
 }
 
-/* Minimal F1 Card */
+/* Clean Minimal Card */
 .f1-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 6px;
+  border-radius: 8px;
   position: relative;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.2s ease;
 }
 
 .f1-card:hover {
-  border-color: var(--border-hover);
   background: var(--bg-card-hover);
+  border-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
 
-/* Minimal Badge */
-.f1-pill {
+/* Section Header Minimal */
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.section-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Team Color Accent Pills */
+.team-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 8px;
-  border-radius: 3px;
+  padding: 3px 9px;
+  border-radius: 4px;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 500;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
-  color: var(--text-muted);
 }
 
-.f1-pill-red {
-  background: rgba(225, 6, 0, 0.1);
-  border-color: rgba(225, 6, 0, 0.25);
+.team-badge-ferrari {
+  border-color: rgba(225, 6, 0, 0.4);
   color: #ff4d4d;
+  background: rgba(225, 6, 0, 0.08);
 }
 
-.f1-pill-cyan {
-  background: rgba(0, 240, 255, 0.08);
-  border-color: rgba(0, 240, 255, 0.2);
-  color: var(--cyan-telemetry);
+.team-badge-mercedes {
+  border-color: rgba(0, 161, 156, 0.4);
+  color: #00e5dc;
+  background: rgba(0, 161, 156, 0.08);
 }
 
-.f1-pill-green {
-  background: rgba(0, 230, 118, 0.08);
-  border-color: rgba(0, 230, 118, 0.2);
-  color: var(--green-sector);
+.team-badge-mclaren {
+  border-color: rgba(255, 128, 0, 0.4);
+  color: #ff9d3b;
+  background: rgba(255, 128, 0, 0.08);
 }
 
-/* Pulse Dot */
-@keyframes pulse-dot {
-  0% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.3;
-  }
+.team-badge-aston {
+  border-color: rgba(34, 153, 113, 0.4);
+  color: #38d6a3;
+  background: rgba(34, 153, 113, 0.08);
 }
 
-.status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--green-sector);
-  animation: pulse-dot 1.8s infinite;
+.team-badge-alpine {
+  border-color: rgba(0, 147, 204, 0.4);
+  color: #33b8ff;
+  background: rgba(0, 147, 204, 0.08);
 }
 
 .container-custom {
