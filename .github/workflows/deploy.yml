@@ -31,8 +31,11 @@ jobs:
           node-version: 22
           cache: "pnpm"
 
-      - name: Install dependencies
-        run: pnpm install --config.onlyBuiltDependencies=esbuild --no-frozen-lockfile
+      - name: Install dependencies (skip scripts)
+        run: pnpm install --ignore-scripts --no-frozen-lockfile
+
+      - name: Rebuild native deps (esbuild)
+        run: pnpm rebuild esbuild
 
       - name: Build site
         run: pnpm build
