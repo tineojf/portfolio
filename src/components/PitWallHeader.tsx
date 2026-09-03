@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield, Activity, Award, Code2, FolderGit2, Mail } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export const PitWallHeader: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -14,11 +14,11 @@ export const PitWallHeader: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'INICIO', href: '#hero', icon: <Activity className="w-4 h-4" /> },
-    { name: 'SECTORES (EXP)', href: '#experiencia', icon: <Award className="w-4 h-4" /> },
-    { name: 'TELEMETRÍA (PROYECTOS)', href: '#proyectos', icon: <FolderGit2 className="w-4 h-4" /> },
-    { name: 'GARAGE (STACK)', href: '#stack', icon: <Code2 className="w-4 h-4" /> },
-    { name: 'CONTACTO', href: '#contacto', icon: <Mail className="w-4 h-4" /> },
+    { name: 'EXPERIENCIA', href: '#experiencia' },
+    { name: 'PROYECTOS', href: '#proyectos' },
+    { name: 'STACK', href: '#stack' },
+    { name: 'EDUCACIÓN', href: '#educacion' },
+    { name: 'CONTACTO', href: '#contacto' },
   ];
 
   return (
@@ -29,128 +29,80 @@ export const PitWallHeader: React.FC = () => {
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: scrolled ? 'rgba(10, 10, 14, 0.92)' : 'rgba(10, 10, 14, 0.65)',
-        backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-        transition: 'all 0.3s ease',
+        backgroundColor: scrolled ? 'rgba(8, 8, 12, 0.88)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(12px)' : 'none',
+        borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
+        transition: 'all 0.25s ease',
+        padding: '1.1rem 0',
       }}
     >
-      {/* Top Telemetry Ticker Bar */}
-      <div
-        style={{
-          backgroundColor: '#07070a',
-          borderBottom: '1px solid rgba(225, 6, 0, 0.2)',
-          padding: '4px 1.5rem',
-          fontSize: '0.7rem',
-          fontFamily: "var(--font-f1)",
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          color: '#8e8ea8',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#00e676' }}>
-            <span className="drs-indicator"></span>
-            DRS: ENABLED
-          </span>
-          <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
-          <span style={{ color: '#00f0ff' }}>STATUS: READY TO RACE</span>
-          <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
-          <span>LOCATION: PERÚ</span>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <span style={{ color: 'var(--f1-red)', fontWeight: 700 }}>DRIVER: #88 TINEO</span>
-          <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
-          <span>LATENCY: 12ms</span>
-        </div>
-      </div>
-
-      {/* Navigation Content */}
-      <div className="container-custom" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem 1.5rem' }}>
-        {/* Brand / Logo */}
+      <div className="container-custom" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        
+        {/* Brand */}
         <a href="#hero" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
           <div
             style={{
-              width: '32px',
-              height: '32px',
+              width: '8px',
+              height: '8px',
               backgroundColor: 'var(--f1-red)',
-              borderRadius: '4px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontWeight: 900,
-              fontFamily: 'var(--font-f1)',
-              color: '#ffffff',
-              boxShadow: '0 0 12px rgba(225, 6, 0, 0.5)',
-              transform: 'skewX(-10deg)',
+              borderRadius: '1px',
             }}
-          >
-            JF
-          </div>
-          <div>
-            <div style={{ fontFamily: 'var(--font-f1)', fontWeight: 700, fontSize: '1.05rem', color: '#ffffff', letterSpacing: '0.05em' }}>
-              TINEO <span style={{ color: 'var(--f1-red)' }}>F1</span>
-            </div>
-            <div style={{ fontSize: '0.65rem', color: '#8e8ea8', fontFamily: 'var(--font-f1)' }}>FULL STACK TELEMETRY</div>
+          />
+          <div style={{ fontFamily: 'var(--font-f1)', fontWeight: 700, fontSize: '0.95rem', color: '#ffffff', letterSpacing: '0.08em' }}>
+            TINEO <span className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontWeight: 400 }}>// 88</span>
           </div>
         </a>
 
         {/* Desktop Links */}
-        <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+        <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               style={{
-                color: '#d0d0e0',
+                color: 'var(--text-muted)',
                 textDecoration: 'none',
-                fontSize: '0.78rem',
-                fontFamily: 'var(--font-f1)',
-                fontWeight: 600,
+                fontSize: '0.75rem',
+                fontFamily: 'var(--font-mono)',
+                fontWeight: 500,
                 letterSpacing: '0.05em',
                 transition: 'color 0.2s ease',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--f1-red)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#d0d0e0')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
             >
-              <span style={{ color: 'var(--f1-red)', opacity: 0.8 }}>{link.icon}</span>
               {link.name}
             </a>
           ))}
+
+          {/* Status Indicator */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.7rem', fontFamily: 'var(--font-mono)', color: 'var(--green-sector)', padding: '3px 8px', background: 'rgba(0, 230, 118, 0.05)', borderRadius: '3px', border: '1px solid rgba(0, 230, 118, 0.15)' }}>
+            <span className="status-dot"></span>
+            DRS: ACTIVE
+          </div>
+
+          {/* Download CV */}
           <a
             href="./cv-tineo-franco-fs.pdf"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              padding: '6px 14px',
-              backgroundColor: 'rgba(225, 6, 0, 0.15)',
-              border: '1px solid var(--f1-red)',
-              borderRadius: '4px',
               color: '#ffffff',
               textDecoration: 'none',
-              fontFamily: 'var(--font-f1)',
-              fontSize: '0.75rem',
-              fontWeight: 700,
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.72rem',
+              fontWeight: 500,
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '6px',
-              transition: 'all 0.2s ease',
-              transform: 'skewX(-6deg)',
+              gap: '4px',
+              borderBottom: '1px solid var(--f1-red)',
+              paddingBottom: '2px',
+              transition: 'opacity 0.2s ease',
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = 'var(--f1-red)';
-              e.currentTarget.style.boxShadow = '0 0 15px rgba(225, 6, 0, 0.6)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'rgba(225, 6, 0, 0.15)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
           >
-            <i className="fa-solid fa-download"></i> DESCARGAR CV
+            CV.PDF <ArrowUpRight size={12} style={{ color: 'var(--f1-red)' }} />
           </a>
         </nav>
 
@@ -163,20 +115,20 @@ export const PitWallHeader: React.FC = () => {
             border: 'none',
             color: '#ffffff',
             cursor: 'pointer',
-            padding: '4px',
           }}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
+
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Dropdown */}
       {mobileMenuOpen && (
         <div
           style={{
-            backgroundColor: '#0a0a0e',
-            borderBottom: '1px solid var(--f1-red)',
+            backgroundColor: '#08080c',
+            borderBottom: '1px solid var(--border-subtle)',
             padding: '1.5rem',
             display: 'flex',
             flexDirection: 'column',
@@ -191,16 +143,11 @@ export const PitWallHeader: React.FC = () => {
               style={{
                 color: '#ffffff',
                 textDecoration: 'none',
-                fontFamily: 'var(--font-f1)',
-                fontSize: '0.9rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                padding: '8px 0',
-                borderBottom: '1px solid rgba(255,255,255,0.05)',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.85rem',
+                padding: '6px 0',
               }}
             >
-              <span style={{ color: 'var(--f1-red)' }}>{link.icon}</span>
               {link.name}
             </a>
           ))}
@@ -210,29 +157,25 @@ export const PitWallHeader: React.FC = () => {
             rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             style={{
-              padding: '10px',
-              backgroundColor: 'var(--f1-red)',
-              color: '#ffffff',
-              textAlign: 'center',
+              color: 'var(--f1-red)',
               textDecoration: 'none',
-              fontFamily: 'var(--font-f1)',
-              fontWeight: 700,
-              borderRadius: '4px',
-              marginTop: '8px',
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.85rem',
+              fontWeight: 600,
+              paddingTop: '6px',
             }}
           >
-            DESCARGAR CV (PDF)
+            DESCARGAR CV (PDF) →
           </a>
         </div>
       )}
 
-      {/* Inline styles for media query */}
       <style>{`
-        @media (max-width: 868px) {
+        @media (max-width: 820px) {
           .desktop-nav { display: none !important; }
           .mobile-toggle { display: block !important; }
         }
-        @media (min-width: 869px) {
+        @media (min-width: 821px) {
           .mobile-toggle { display: none !important; }
         }
       `}</style>

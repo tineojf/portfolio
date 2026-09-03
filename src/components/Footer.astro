@@ -1,83 +1,47 @@
 ---
 ---
 
-<footer id="contacto" style="padding: 60px 0 30px 0; border-top: 2px solid var(--f1-red); background: #07070a; position: relative;">
+<footer id="contacto" style="padding: 60px 0 30px 0; border-top: 1px solid var(--border-subtle); background: #060609;">
   <div class="container-custom">
     
-    <!-- Contact & Pit Wall Banner -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;" class="footer-grid">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 2rem; margin-bottom: 3rem;">
       
-      <div>
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-          <div style="width: 28px; height: 28px; background: var(--f1-red); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-f1); font-weight: 900; font-size: 0.85rem; border-radius: 3px; transform: skewX(-10deg);">
-            JF
-          </div>
-          <span className="font-f1" style="font-size: 1.2rem; font-weight: 700; color: #fff;">
-            JEAN FRANCO TINEO
-          </span>
+      <div style="max-width: 450px;">
+        <div style="font-family: var(--font-f1); font-weight: 700; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">
+          Jean Franco Tineo <span style="color: var(--f1-red);">.</span>
         </div>
-        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; max-width: 480px; margin-bottom: 1.5rem;">
-          Desarrollador de Software Full Stack. Disponible para oportunidades remotas o presenciales en proyectos SaaS, Backend Java/Spring Boot, Frontend React/Angular e integraciones de IA.
+        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
+          Full Stack Developer. Disponible para oportunidades remotas en proyectos SaaS, Backend Java/Spring Boot e integraciones de IA.
         </p>
-        <div style="display: flex; gap: 12px;">
-          <a href="https://github.com/tineojf" target="_blank" aria-label="GitHub" style="width: 38px; height: 38px; border-radius: 4px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-carbon); display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: all 0.2s ease;">
+        <div style="display: flex; gap: 12px; font-size: 1.1rem;">
+          <a href="https://github.com/tineojf" target="_blank" aria-label="GitHub" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s ease;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='var(--text-muted)'">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/tineojf" target="_blank" aria-label="LinkedIn" style="width: 38px; height: 38px; border-radius: 4px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-carbon); display: flex; align-items: center; justify-content: center; color: #0a66c2; text-decoration: none; transition: all 0.2s ease;">
+          <a href="https://linkedin.com/in/tineojf" target="_blank" aria-label="LinkedIn" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s ease;" onmouseenter="this.style.color='#0a66c2'" onmouseleave="this.style.color='var(--text-muted)'">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
-          <a href="mailto:tineo.dev@gmail.com" aria-label="Email" style="width: 38px; height: 38px; border-radius: 4px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-carbon); display: flex; align-items: center; justify-content: center; color: var(--f1-red); text-decoration: none; transition: all 0.2s ease;">
+          <a href="mailto:tineo.dev@gmail.com" aria-label="Email" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s ease;" onmouseenter="this.style.color='var(--f1-red)'" onmouseleave="this.style.color='var(--text-muted)'">
             <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
       </div>
 
-      <!-- Direct Contact Card -->
-      <div class="f1-card" style="padding: 1.75rem; background: rgba(19, 19, 26, 0.8);">
-        <h3 class="font-f1" style="font-size: 1.1rem; color: #fff; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">
-          <i class="fa-solid fa-satellite-dish" style="color: var(--cyan-telemetry);"></i> CANALES DE RADIO Y CONTACTO
-        </h3>
-
-        <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem;">
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-envelope" style="color: var(--f1-red); width: 20px;"></i>
-            <span style="color: var(--text-muted);">Email:</span>
-            <a href="mailto:tineo.dev@gmail.com" style="color: #fff; text-decoration: none; font-family: var(--font-f1); font-weight: 600;">tineo.dev@gmail.com</a>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-phone" style="color: var(--green-sector); width: 20px;"></i>
-            <span style="color: var(--text-muted);">Teléfono:</span>
-            <a href="tel:+51953178515" style="color: #fff; text-decoration: none; font-family: var(--font-f1); font-weight: 600;">+51 953 178 515</a>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-location-dot" style="color: var(--cyan-telemetry); width: 20px;"></i>
-            <span style="color: var(--text-muted);">Ubicación:</span>
-            <span style="color: #fff; font-weight: 600;">Perú (Disponible para Remoto Global)</span>
-          </div>
-        </div>
+      <div class="font-mono" style="font-size: 0.82rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+        <div><span style="color: #ffffff;">Email:</span> <a href="mailto:tineo.dev@gmail.com" style="color: var(--text-muted); text-decoration: none;">tineo.dev@gmail.com</a></div>
+        <div><span style="color: #ffffff;">Teléfono:</span> <a href="tel:+51953178515" style="color: var(--text-muted); text-decoration: none;">+51 953 178 515</a></div>
+        <div><span style="color: #ffffff;">Ubicación:</span> Perú (Remoto Global)</div>
       </div>
 
     </div>
 
-    <!-- Bottom Copyright -->
-    <div style="border-top: 1px solid var(--border-carbon); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted);">
+    <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-muted);">
       <div>
-        Construido en <strong style="color: #fff;">Astro + React</strong>. Estética F1 Telemetry. © {new Date().getFullYear()} Jean Franco Tineo.
+        Astro + React. Minimalist F1 Telemetry. © {new Date().getFullYear()} Jean Franco Tineo.
       </div>
-      <div style="font-family: var(--font-f1); font-size: 0.75rem; color: var(--green-sector);">
-        <i class="fa-solid fa-check"></i> ALL SYSTEMS NOMINAL
+      <div class="font-mono" style="font-size: 0.72rem; color: var(--green-sector);">
+        ● STATUS: ALL SYSTEMS NOMINAL
       </div>
     </div>
 
   </div>
 </footer>
-
-<style>
-  @media (max-width: 868px) {
-    .footer-grid {
-      grid-template-columns: 1fr !important;
-    }
-  }
-</style>
